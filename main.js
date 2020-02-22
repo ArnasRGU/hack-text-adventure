@@ -45,14 +45,14 @@ dialog("You wake up",["go downstairs"],function (ans) {
 	dialog("what do you eat",["cereal","beef jerky","nothing, food is for the weak"], function (ans) {
 		switch (ans) {
 			case "cereal":
-				dialog("a wholesome meal, fills you up, you feel ready for the day ahead<br>you need to catch the bus",["go to catch the bus"],console.log)
+				dialog("a wholesome meal, fills you up, you feel ready for the day ahead<br>you need to catch the bus",["go outside"],console.log)
 			break;
 			case "beef jerky":
-				dialog("its really chewy, like really really chewy<br>you need to catch the bus",["go to catch the bus"],console.log)
+				dialog("its really chewy, like really really chewy<br>you need to catch the bus",["go outside"],console.log)
 			break;
 
 			case "nothing, food is for the weak":
-				dialog("you are big and strong, wow<br>you need to catch the bus",["go to catch the bus"],console.log)
+				dialog("you are big and strong, wow<br>you need to catch the bus",["go outside"],console.log)
 			break;
 		}
 		
