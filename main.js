@@ -88,6 +88,7 @@ function frontYardGood() {
 function busScene() {
 	changeBackground("images/bus.jpg")
 	changeSpeakingCharacter("images/busDriver.png")
+	name2.style.color = "#132575";
 	name2.innerHTML = "Bus Driver";
 	writeDialog('<span style="color:#132575">...</span')
 	getChoices(["<i>sit down and ride to school</i>"],[schoolArrival]);
