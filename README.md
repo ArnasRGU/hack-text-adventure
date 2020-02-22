@@ -1,2 +1,2 @@
 # hack-text-adventure
-cool
+ok
