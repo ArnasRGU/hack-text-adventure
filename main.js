@@ -12,9 +12,9 @@ function getChoices(arr, callback) {
 		let choice = document.createElement("button");
 		choice.innerHTML = i;
 		choice.onclick = function () {
-			callback(i);
 			choices.innerHTML = "";
 			description.innerHTML = "";
+			callback(i);
 		}
 		choices.appendChild(choice);
 	}
@@ -27,7 +27,11 @@ function dialog(text,responses,callback) {
 
 
 dialog("are you exist?",["yes","no"],function (ans) {
-	dialog("ok thats cool bro",["ok"],console.log);
+	if (ans === "yes") {
+		description.innerHTML = "ok";
+	} else {
+		description.innerHTML = "woah";
+	}
 });
 
 
