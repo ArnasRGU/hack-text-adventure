@@ -46,13 +46,13 @@ function kitchen1() {
 	changeSpeakingCharacter("images/cheemsMother.png");
 	name2.innerHTML = "Cheems Mother";
 	writeDialog("<span style="color:#b0378a">Hey honey what do you want for breakfast?</span>")
-	getChoices(["cereal","beef jerky", "nothing"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
+	getChoices(["<i>cereal</i>","<i>beef jerky</i>", "<i>nothing</i>"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
 }
 
 function cerealBreakfast() {
-	writeDialog("<i>A fufilling meal, you feel full</i>");
-	writeDialog("<u>Mother:</u>Time for school honey");
-	getChoices(["go out the door"],[frontYardGood]);
+	writeDialog("A fufilling meal, you feel full");
+	writeDialog("<span style="color:#b0378a">Time for school honey</span>");
+	getChoices(["<i>go out the door</i>"],[frontYardGood]);
 
 }
 
