@@ -11,6 +11,7 @@ function changeBackground(path) {
 	domBody.background = path;
 }
 
+name1.innerHTML += "Cheems";
 changeBackground("images/bedroom.jpg")
 
 function changeSpeakingCharacter(path) {
