@@ -6,12 +6,16 @@ body {
 }
 
 #img1{
-	filter: drop-shadow(0px 0px 10px #1e1e1e);	
+	filter: drop-shadow(0px 0px 10px #1e1e1e);
+	height: 223;
+	width: 310;
 }
 
 #img2{
 	filter: drop-shadow(0px 0px 10px #1e1e1e);
 	float: right;
+	height: 223;
+	width: 230.4;
 }
 
 #dialogBox {
@@ -23,8 +27,14 @@ body {
 	filter: drop-shadow(0px 0px 10px #1e1e1e);
 }
 
+#name1{
+	filter: drop-shadow(0px 0px 10px #1e1e1e);
+	background-color:rgba(255,255,255,0.6);
+}
+
 #name2{
 	float: right;
+	background-color:rgba(255,255,255,0.6);
 }
 	
 #description{
