@@ -52,7 +52,9 @@ dialog("You wake up",["go downstairs"],function (ans) {
 				dialog("you are big and strong, wow<br>you need to catch the bus",["go to catch the bus"],console.log)
 			break;
 		}
-
+		dialog("you go on bus",["sit down"],function (ans) {
+			changeBackground("images/bus.jpg");
+		}
 
 		})
 	
