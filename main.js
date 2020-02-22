@@ -5,6 +5,12 @@ description = gel("description");
 choices = gel("choices");
 
 
+domBody = document.body
+
+function changeBackground(path) {
+	domBody.style.backgroundImage = path;
+}
+
 
 
 function getChoices(arr, callback) {
@@ -26,12 +32,7 @@ function dialog(text,responses,callback) {
 }
 
 
-dialog("are you exist?",["yes","no"],function (ans) {
-	if (ans === "yes") {
-		description.innerHTML = "ok";
-	} else {
-		description.innerHTML = "woah";
-	}
+dialog("",["yes","no"],function (ans) {
 });
 
 
