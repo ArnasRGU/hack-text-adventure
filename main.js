@@ -11,6 +11,7 @@ function changeBackground(path) {
 	domBody.background = path;
 }
 
+name1.innerHTML += "Cheems";
 changeBackground("images/bedroom.jpg")
 
 function changeSpeakingCharacter(path) {
@@ -40,6 +41,7 @@ function dialog(text,responses,callback) {
 dialog("You wake up",["go downstairs"],function (ans) {
 	changeBackground("images/kitchen.jpg");
 	changeSpeakingCharacter("images/cheemsMother.png");
+	name2.innerHTML += "Cheems Mother";
 	dialog("what do you eat",["cereal","beef jerky","nothing, food is for the weak"], function (ans) {
 		switch (ans) {
 			case "cereal":
