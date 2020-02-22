@@ -119,6 +119,7 @@ function goInsideSchoolReal() {
 function scienceClass() {
 	changeBackground("images/classroomScience.jpg");
 	changeSpeakingCharacter("images/teacherScience.png");
+	name2.style.color = "#797f99";
 	name2.innerHTML = "Science Teacher";
 	writeDialog('<span style="color:#797f99">E=mcheems</span>');
 }
