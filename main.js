@@ -55,8 +55,7 @@ dialog("You wake up",["go downstairs"],function (ans) {
 				dialog("you are big and strong, wow<br>you need to catch the bus",["go outside"],console.log)
 			break;
 		}
-		
-
+		changeBackground("images/houseExterior.jpg");
 		})
 	
 	})
