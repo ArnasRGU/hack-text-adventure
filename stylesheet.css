@@ -41,13 +41,19 @@ body {
 	width: 30%;
 	border-radius: 10px;
 	text-align: center;
-	color: #b0378a;
 }
 
-#name1, #name2{
+#name1{
 	padding-left: 2%;
 	padding-right: 2%;
 	font-size: 25px;
+}
+
+#name2{
+	padding-left: 2%;
+	padding-right: 2%;
+	font-size: 25px;
+	color: #b0378a;
 }
 
 #description{
