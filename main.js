@@ -11,10 +11,6 @@ function changeBackground(path) {
 	domBody.background = path;
 }
 
-function changeFace(path){
-	domBody.img2 = path
-}
-
 changeBackground("images/bedroom.jpg")
 
 function changeSpeakingCharacter(path) {
@@ -42,7 +38,7 @@ function dialog(text,responses,callback) {
 
 
 dialog("You wake up",["go downstairs"],function (ans) {
-	changeBackground("images/kitchen.jpg");
+	changeSpeakingCharacte("images/kitchen.jpg");
 	changeFace("images/cheemsMother.png");
 	dialog("what do you eat",["cereal","beef jerky","nothing, food is for the weak"], function (ans) {
 		switch (ans) {
