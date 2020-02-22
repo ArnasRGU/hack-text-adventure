@@ -38,14 +38,14 @@ function getChoices(choicesArr, callbacksArr) {
 }
 
 
-writeDialog("<i>You awake</i>")
-getChoices(["go down stairs"],[kitchen1]);
+writeDialog("You awake")
+getChoices(["<i>go down stairs</i>"],[kitchen1]);
 
 function kitchen1() {
 	changeBackground("images/kitchen.jpg");
 	changeSpeakingCharacter("images/cheemsMother.png");
 	name2.innerHTML = "Cheems Mother";
-	writeDialog("<u>Mother:</u>Hey honey what do you want for breakfast?")
+	writeDialog("<span style=\"color:#b0378a\"Hey honey what do you want for breakfast?")
 	getChoices(["cereal","beef jerky", "nothing"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
 }
 
