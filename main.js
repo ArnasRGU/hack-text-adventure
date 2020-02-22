@@ -46,6 +46,7 @@ dialog("You wake up",["go downstairs"],function (ans) {
 		switch (ans) {
 			case "cereal":
 				dialog("a wholesome meal, fills you up, you feel ready for the day ahead<br>you need to catch the bus",["go outside"],console.log)
+				changeBackground("images/houseExterior.jpg");
 			break;
 			case "beef jerky":
 				dialog("its really chewy, like really really chewy<br>you need to catch the bus",["go outside"],console.log)
@@ -55,7 +56,7 @@ dialog("You wake up",["go downstairs"],function (ans) {
 				dialog("you are big and strong, wow<br>you need to catch the bus",["go outside"],console.log)
 			break;
 		}
-		changeBackground("images/houseExterior.jpg");
+		
 		})
 	
 	})
