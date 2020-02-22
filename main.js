@@ -17,45 +17,58 @@ function changeSpeakingCharacter(path) {
 	charImg2.src = path;
 }
 
+function writeDialog(str) {
+	description.innerHTML += str + "<br>";
+}
 
-function getChoices(arr, callback) {
-	for (let i of arr) {
+function getChoices(choicesArr, callbacksArr) {
+	for (let i = 0; i < choicesArr.length; i++) {
 		let choice = document.createElement("button");
-		choice.innerHTML = i;
+		choice.innerHTML = choicesArr[i];
 		choice.onclick = function () {
 			choices.innerHTML = "";
-			description.innerHTML += i + "<br>";
-			callback(i);
+			description.innerHTML += choicesArr[i] + "<br>";
+			callbacksArr[i]();
 		}
 		choices.appendChild(choice);
 	}
 }
 
-function dialog(text,responses,callback) {
-	description.innerHTML += text + "<br>";
-	getChoices(responses, callback);
+
+writeDialog("<i>You awake</i>")
+getChoices(["go down stairs"],[kitchen1]);
+
+function kitchen1() {
+	changeBackground("images/kitchen.jpg");
+	changeSpeakingCharacter("images/cheemsMother.png");
+	writeDialog("<u>Mother:</u>Hey honey what do you want for breakfast?")
+	getChoices(["cereal","beef jerky", "nothing"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
 }
 
+function cerealBreakfast() {
+	writeDialog("A fufilling meal, you feel full");
+	writeDialog("<u>Mother:</u>Time for school honey");
+	getChoices(["go out the door"],[frontYardGood]);
 
-dialog("You wake up",["go downstairs"],function (ans) {
-	changeBackground("images/kitchen.jpg");
-	dialog("what do you eat",["cereal","beef jerky","nothing, food is for the weak"], function (ans) {
-		switch (ans) {
-			case "cereal":
-				dialog("a wholesome meal, fills you up, you feel ready for the day ahead<br>you need to catch the bus",["go to catch the bus"],console.log)
-			break;
-			case "beef jerky":
-				dialog("its really chewy, like really really chewy<br>you need to catch the bus",["go to catch the bus"],console.log)
-			break;
+}
 
-			case "nothing, food is for the weak":
-				dialog("you are big and strong, wow<br>you need to catch the bus",["go to catch the bus"],console.log)
-			break;
-		}
+function beefJerkyBreakfast() {
+	writeDialog("Its really chewy");
+}
 
+function nothingBreakfast() {
 
-		})
-	
-	})
+}
 
+function frontYardGood() {
+	changeSpeakingCharacter("");
+	changeBackground("images/houseExterior.jpg");
+	writeDialog("<i>The airs smells good</i>")
+	getChoices(["go to get the bus"], [busScene]);
 
+}
+
+function busScene() {
+	changeBackground("images/bus.jpg")
+	changeSpeakingCharacter("images/busDriver.png")
+}
