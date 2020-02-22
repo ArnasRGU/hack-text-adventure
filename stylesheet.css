@@ -10,7 +10,7 @@ body {
 	float: left;
 }
 
-img2{
+#img2{
 	filter: drop-shadow(0px 0px 10px #1e1e1e);
 	float: right;
 }
@@ -43,7 +43,7 @@ img2{
 	text-align: center;
 }
 
-#name1, name2{
+#name1, #name2{
 	padding-left: 2%;
 	padding-right: 2%;
 	font-size: 25px;
