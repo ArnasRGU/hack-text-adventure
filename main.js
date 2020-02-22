@@ -99,7 +99,7 @@ function schoolArrival() {
 	changeSpeakingCharacter("");
 	name2.innerHTML = "";
 	writeDialog("<i>Aberdeen University</i>");
-	getChoices(["go inside"],[goInsideSchoolFake]);
+	getChoices(["go inside"],[goInsideSchoolReal]);
 }
 
 function goInsideSchoolFake() {
@@ -116,7 +116,8 @@ function goInsideSchoolReal() {
 }
 
 function scienceClass() {
-	changeBackground("images/schoolCorridor.jpg");
-	changeSpeakingCharacter("");
-	name2.innerHTML = "";
+	changeBackground("images/classroomScience.jpg");
+	changeSpeakingCharacter("images/teacherScience.png");
+	name2.innerHTML = "Science Teacher";
+	writeDialog("<u>Science Teacher:</u>E=mcheems");
 }
