@@ -7,12 +7,12 @@ body {
 
 #img1{
 	filter: drop-shadow(0px 0px 10px #1e1e1e);
-	align: left;
+	float: left;
 }
 
 #img2{
 	filter: drop-shadow(0px 0px 10px #1e1e1e);
-	align: right;
+	float: right;
 }
 
 #dialogBox {
