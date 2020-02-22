@@ -45,7 +45,7 @@ function kitchen1() {
 	changeBackground("images/kitchen.jpg");
 	changeSpeakingCharacter("images/cheemsMother.png");
 	name2.innerHTML = "Cheems Mother";
-	writeDialog("<span style="color:#b0378a">Hey honey what do you want for breakfast?</span>")
+	writeDialog("<span style=\"color:#b0378a"\>Hey honey what do you want for breakfast?</span>")
 	getChoices(["<i>cereal</i>","<i>beef jerky</i>", "<i>nothing</i>"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
 }
 
