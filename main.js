@@ -1,23 +1,33 @@
-rl = require("readline-sync");
-fs = require("fs");
-sleep = require("sleep")
+function gel(id) {return document.getElementById(id)}
+charImg1 = gel("img1");
+charImg1 = gel("img2");
+description = gel("description");
+choices = gel("choices");
 
 
-cheems = fs.readFileSync("imgs/cheems.txt").toString();
 
-function printSlowly(str,delay,i = 0) {
-	if (i === str.length-1) {
-		process.stdout.write(str[i])
-	} else {
-		process.stdout.write(str[i])
-		setTimeout(printSlowly,delay,str,delay,i+1)
+
+function getChoices(arr, callback) {
+	for (let i of arr) {
+		let choice = document.createElement("button");
+		choice.innerHTML = i;
+		choice.onclick = function () {
+			callback(i);
+			choices.innerHTML = "";
+			description.innerHTML = "";
+		}
+		choices.appendChild(choice);
 	}
 }
 
-printSlowly("hello",100);
-printSlowly("hello",100);
-printSlowly("hello",100);
-printSlowly("hello",100);
+function dialog(text,responses,callback) {
+	description.innerHTML = text;
+	getChoices(responses, callback);
+}
 
+
+dialog("are you exist?",["yes","no"],function (ans) {
+	dialog("ok thats cool bro",["ok"],console.log);
+});
 
 
