@@ -1,6 +1,6 @@
 function gel(id) {return document.getElementById(id)}
 charImg1 = gel("img1");
-charImg1 = gel("img2");
+charImg2 = gel("img2");
 description = gel("description");
 choices = gel("choices");
 
@@ -8,10 +8,18 @@ choices = gel("choices");
 domBody = document.body
 
 function changeBackground(path) {
-	domBody.style.backgroundImage = path;
+	domBody.background = path;
 }
 
+changeBackground("images/bedroom.jpg")
 
+function changeSpeakingCharacter(path) {
+	charImg2.src = path;
+}
+
+function slowWrite(text,callback) {
+	
+}
 
 function getChoices(arr, callback) {
 	for (let i of arr) {
@@ -19,7 +27,7 @@ function getChoices(arr, callback) {
 		choice.innerHTML = i;
 		choice.onclick = function () {
 			choices.innerHTML = "";
-			description.innerHTML = "";
+			description.innerHTML += i + "<br>";
 			callback(i);
 		}
 		choices.appendChild(choice);
@@ -27,12 +35,15 @@ function getChoices(arr, callback) {
 }
 
 function dialog(text,responses,callback) {
-	description.innerHTML = text;
+	description.innerHTML += text + "<br>";
 	getChoices(responses, callback);
 }
 
 
-dialog("",["yes","no"],function (ans) {
+dialog("You wake up",["go downstairs"],function (ans) {
+	changeBackground("images/kitchen.jpg");
+	dialog("three ",["yes","no"],function (ans) {
+	})
 });
 
 
