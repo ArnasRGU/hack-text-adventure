@@ -12,6 +12,7 @@ function changeBackground(path) {
 }
 
 name1.innerHTML += "Cheems";
+
 changeBackground("images/bedroom.jpg")
 
 function changeSpeakingCharacter(path) {
@@ -20,6 +21,7 @@ function changeSpeakingCharacter(path) {
 
 function writeDialog(str) {
 	description.innerHTML += str + "<br>";
+	dialogBox.scrollBy(0,1000);
 }
 
 function getChoices(choicesArr, callbacksArr) {
@@ -42,26 +44,40 @@ getChoices(["go down stairs"],[kitchen1]);
 function kitchen1() {
 	changeBackground("images/kitchen.jpg");
 	changeSpeakingCharacter("images/cheemsMother.png");
+	name2.innerHTML = "Cheems Mother";
 	writeDialog("<u>Mother:</u>Hey honey what do you want for breakfast?")
 	getChoices(["cereal","beef jerky", "nothing"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
 }
 
 function cerealBreakfast() {
-	writeDialog("A fufilling meal, you feel full");
+	writeDialog("<i>A fufilling meal, you feel full</i>");
 	writeDialog("<u>Mother:</u>Time for school honey");
 	getChoices(["go out the door"],[frontYardGood]);
 
 }
 
 function beefJerkyBreakfast() {
-	writeDialog("Its really chewy");
+	writeDialog("<i>Its really chewy</i>");
+	writeDialog("<u>Mother:</u>Time for school honey");
+	getChoices(["go out the door"],[frontYardBad]);
 }
 
 function nothingBreakfast() {
+	writeDialog("<i>you feel airy and light<i>");
+	writeDialog("<u>Mother:</u>Time for school honey");
+	getChoices(["go out the door"],[frontYardGood]);
+}
 
+function frontYardBad() {
+	changeSpeakingCharacter("");
+	name2.innerHTML = "";
+	changeBackground("images/houseExterior.jpg");
+	writeDialog("<i>you missed the bus</i>")
+	getChoices(["quit life"],[console.log]);
 }
 
 function frontYardGood() {
+	name2.innerHTML = "";
 	changeSpeakingCharacter("");
 	changeBackground("images/houseExterior.jpg");
 	writeDialog("<i>The airs smells good</i>")
@@ -72,4 +88,35 @@ function frontYardGood() {
 function busScene() {
 	changeBackground("images/bus.jpg")
 	changeSpeakingCharacter("images/busDriver.png")
+	name2.innerHTML = "Bus Driver";
+	writeDialog("<u>Bus Driver:</u>...")
+	getChoices(["sit down and ride to school"],[schoolArrival]);
+}
+
+
+function schoolArrival() {
+	changeBackground("images/schoolExterior.jpg");
+	changeSpeakingCharacter("");
+	name2.innerHTML = "";
+	writeDialog("<i>Aberdeen University</i>");
+	getChoices(["go inside"],[goInsideSchoolFake]);
+}
+
+function goInsideSchoolFake() {
+	
+}
+
+
+function goInsideSchoolReal() {
+	changeBackground("images/schoolCorridor.jpg");
+	changeSpeakingCharacter("");
+	name2.innerHTML = "";
+	writeDialog("<i>first on the rota, science</i>")
+	getChoices(["go to science"],[scienceClass]);
+}
+
+function scienceClass() {
+	changeBackground("images/schoolCorridor.jpg");
+	changeSpeakingCharacter("");
+	name2.innerHTML = "";
 }
