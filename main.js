@@ -59,7 +59,7 @@ function cerealBreakfast() {
 function beefJerkyBreakfast() {
 	writeDialog("Its really chewy");
 	writeDialog('<span style="color:#b0378a">Time for school honey</span>');
-	getChoices([<i>"go out the door</i>"],[frontYardBad]);
+	getChoices(["<i>go out the door</i>"],[frontYardBad]);
 }
 
 function nothingBreakfast() {
