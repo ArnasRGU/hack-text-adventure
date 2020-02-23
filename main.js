@@ -38,8 +38,8 @@ function getChoices(choicesArr, callbacksArr) {
 }
 
 function bedroom1(){
-	writeDialog("<b>You awake</b>");
-	getChoices(["<i>go down stairs</i>","<i>stay in bed</i>"],[kitchen1,bedroom1]);
+	writeDialog("<b>7:00am. The morning sun filters in through the blinds, basking your bedroom in a golden glow.<br>Your feet crunch on a decades worth of discarded cans as you shuffle off your bed.</b>");
+	getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom1]);
 }	
 
 bedroom1();
@@ -48,7 +48,7 @@ function kitchen1(){
 	changeBackground("images/kitchen.jpg");
 	changeSpeakingCharacter("images/cheemsMother.png");
 	name2.innerHTML = "Cheems Mother";
-	writeDialog('<b><span style="color:#b0378a">Hey honey what do you want for breakfast?</span></b>')
+	writeDialog('<b><span style="color:#b0378a">Hey Cheems, I hope you slept well.<br>What do you want for breakfast?</span></b>')
 	getChoices(["<i>cereal</i>","<i>beef jerky</i>", "<i>nothing</i>"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
 }
 
