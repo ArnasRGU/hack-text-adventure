@@ -41,7 +41,7 @@ writeDialog("<b>7:00am. The morning sun filters in through the blinds, basking y
 getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom1]);
 
 function bedroom1(){
-	writeDialog("<b>School starts in an hour, you'd better get up.</b>");
+	writeDialog('<b>"Uni starts in an hour, I had better get up."</b>');
 	getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom1]);
 }	
 		    
@@ -49,19 +49,19 @@ function kitchen1(){
 	changeBackground("images/kitchen.jpg");
 	changeSpeakingCharacter("images/cheemsMother.png");
 	name2.innerHTML = "Cheems Mother";
-	writeDialog('<b><span style="color:#b0378a">Hey Cheems, I hope you slept well.<br>What do you want for breakfast?</span></b>')
-	getChoices(["<i>cereal</i>","<i>beef jerky</i>", "<i>nothing</i>"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
+	writeDialog('<b><span style="color:#b0378a">H-hey Cheems, I hope you slept well.<br>What do you want for breakfast?</span></b>')
+	getChoices(["<i>sugar puffs®</i>","<i>scrambled eggs</i>", "<i>nothing</i>"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
 }
 
 function cerealBreakfast(){
-	writeDialog("<b>A fufilling meal, you feel full</b>");
-	writeDialog('<b><span style="color:#b0378a">Time for school honey</span></b>');
-	getChoices(["<i>go out the door</i>"],[frontYardGood]);
+	writeDialog('<b>"Sugar Puffs®, the nectar of gods." </b>');
+	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, don\'\t want to miss your bus.</span></b>');
+	getChoices(["<i>leave the house</i>"],[frontYardGood]);
 
 }
 
 function beefJerkyBreakfast() {
-	writeDialog("<b>Its really chewy</b>");
+	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."</b>');
 	writeDialog('<b><span style="color:#b0378a">Time for school honey</span></b>');
 	getChoices(["<i>go out the door</i>"],[frontYardBad]);
 }
