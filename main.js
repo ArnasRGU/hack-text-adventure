@@ -104,6 +104,7 @@ function busScene() {
 	changeImg2("images/busDriver.png")
 	name2.style.color = "#132575";
 	name2.innerHTML = "Bus Driver";
+	info2.innerHTML = "Age: 63<br>Likes raw chicken.";
 	writeDialog('<b><span style="color:#132575">...</span></b>')
 	getChoices(["<i>sit down and ride to school</i>"],[schoolArrival]);
 }
@@ -113,6 +114,7 @@ function schoolArrival() {
 	changeBackground("images/schoolExterior.jpg");
 	changeImg2("");
 	name2.innerHTML = "";
+	info2.innerHTML = "":
 	writeDialog("<b>Aberdeen University...</b>");
 	getChoices(["<i>go inside</i>"],[goInsideSchoolReal]);
 }
