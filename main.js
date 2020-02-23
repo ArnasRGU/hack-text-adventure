@@ -154,7 +154,7 @@ function street1(){
 	name2.style.color = "#ff0000";
 	name2.innerHTML = "Joe";
 	info2.style.color = "#ff0000";
-	info2.innerHTML = "Age: 18<br>Diet consists of Wotsists and steak bakes.";
+	info2.innerHTML = "Age: 18<br>Diet consists of Wotsits and steak bakes.";
 	changeImg2("images/bully.png");
 	writeDialog('<b><span style="color:#ff0000">"Hey, look who it is. Little baby Cheems! Still living at home? Hahaha!"</span><br>Cheems hates Joe with a burning passion.</b>');
 	getChoices(["<i>insult him</i>","<i>punch him</i>"], [street2,street3]);
