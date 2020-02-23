@@ -106,7 +106,7 @@ function bedroom2(){
 	changeImg2("");
 	name2.innerHTML = "";
 	info2.innerHTML = "";
-	writeDialog('<b>07:36am. Uni successfully dodged, once again.<br>"Why would I want to live any other way? I get to spend all day doing whatever I want, with no responsibilities, all while being waited on by my adoring mother."<br>Cheems unearthes his laptop from the floor and brings it up to his bed.<br>"Now, where was I - www.por-"<br>~GOOD END?~</B>");
+	writeDialog('<b>07:36am. Uni successfully dodged, once again.<br>"Why would I want to live any other way? I get to spend all day doing whatever I want, with no responsibilities, all while being waited on by my adoring mother."<br>Cheems unearthes his laptop from the floor and brings it up to his bed.<br>"Now, where was I - www.por-"<br>~GOOD END?~</B>');
 }
 
 function street1(){
