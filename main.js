@@ -19,9 +19,51 @@ function changeImg2(path) {
 	charImg2.src = path;
 }
 
+
+function writeFast(str) {
+	description.innerHTML += str;
+}
+
+function slowlyPrintText(stringArray,textNodes,stringIndex=0, i=0) {
+	if (stringIndex <= stringArray.length-1) {
+		if (i === stringArray[stringIndex].length-1) {
+			textNodes[stringIndex].data += stringArray[stringIndex][i];
+			slowlyPrintText(stringArray,textNodes,stringIndex+1,0);
+		} else {
+			textNodes[stringIndex].data += stringArray[stringIndex][i];
+			setTimeout(function () {
+				slowlyPrintText(stringArray,textNodes,stringIndex,i+1);
+			},20);
+		}
+	}
+}
+
+
+function getTextNodes(element,out=[]) {
+	for (i of element.childNodes) {
+		if (i.nodeName === "#text") {
+			out.push(i);
+		} else if (i.childNodes.length > 0) {
+			getTextNodes(i,out);
+		}
+	}
+	return out;
+}
+
 function writeDialog(str) {
-	description.innerHTML += str + "<br>";
-	dialogBox.scrollBy(0,1000);
+	dummyElement = document.createElement("p")
+	dummyElement.innerHTML = str;
+	for (i of dummyElement.childNodes) {
+		textNodes = getTextNodes(dummyElement)
+		tempText = []
+		for (let i = 0; i < textNodes.length; i++) {
+			tempText.push(textNodes[i].data)
+			textNodes[i].data = "";
+			
+		}
+	}
+	for (i of dummyElement.children) {description.append(i)}
+	slowlyPrintText(tempText,textNodes)
 }
 
 function getChoices(choicesArr, callbacksArr) {
@@ -30,7 +72,7 @@ function getChoices(choicesArr, callbacksArr) {
 		choice.innerHTML = choicesArr[i];
 		choice.onclick = function () {
 			choices.innerHTML = "";
-			description.innerHTML += choicesArr[i] + "<br>";
+			description.innerHTML += "<br>" +choicesArr[i] + "<br>";
 			callbacksArr[i]();
 		}
 		choices.appendChild(choice);
