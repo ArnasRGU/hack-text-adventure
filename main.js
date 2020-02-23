@@ -94,18 +94,18 @@ function kitchen1(){
 }
 
 function sugarpuffsBreakfast(){
-	writeDialog('<b>"Sugar Puffs®, the nectar of gods."<br><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
+	writeDialog('<b>"Sugar Puffs®, the nectar of gods."<br><span style="color:#b0378a">You had better be leaving, Cheems, incase you miss your bus.</span></b>');
 	getChoices(["<i>leave the house</i>"],[busOntime]);
 }
 
 function eggsBreakfast(){
 	changeImg2("images/cheemsMotherCry.png");
-	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."<br><span style="color:#b0378a">You had better be leav-</span><br>Why cant you cook scrambled eggs properly!</b>');
+	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."<br><span style="color:#b0378a">You had better be leav-</span><br>Why cant you cook scrambled eggs properly!?</b>');
 	getChoices(["<i>leave the house</i>"],[busLate]);
 }
 
 function nothingBreakfast() {
-	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
+	writeDialog('<b><span style="color:#b0378a">You had better be leaving, Cheems, incase you miss your bus.</span></b>');
 	getChoices(["<i>leave the house</i>"],[busOntime]);
 }
 
