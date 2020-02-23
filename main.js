@@ -87,7 +87,6 @@ function frontYardGood() {
 	changeBackground("images/houseExterior.jpg");
 	writeDialog("<b>the airs smells good</b>")
 	getChoices(["<i>go to get the bus</i>"], [busScene]);
-
 }
 
 function busScene() {
