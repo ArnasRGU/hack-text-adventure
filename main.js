@@ -241,5 +241,6 @@ function goHome() {
 	name2.innerHTML = "Bus Driver";
 	info2.style.color = "#132575";
 	info2.innerHTML = "Age: 63<br>Likes raw chicken.";
-	writeDialog('<b><span style="color:#132575">..........</span><br>~END~</b>');
+	writeDialog('<b><span style="color:#132575">..........</span></b>');
+	writeDialog("<b>~END~</b>");
 }
