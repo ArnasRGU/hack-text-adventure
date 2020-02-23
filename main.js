@@ -14,7 +14,6 @@ function changeImg2(path) {
 	charImg2.src = path;
 }
 
-
 function writeFast(str) {
 	description.innerHTML += str;
 }
@@ -33,7 +32,6 @@ function slowlyPrintText(stringArray,textNodes,stringIndex=0, i=0) {
 		}
 	}
 }
-
 
 function getTextNodes(element,out=[]) {
 	for (i of element.childNodes) {
@@ -54,8 +52,7 @@ function writeDialog(str) {
 		tempText = []
 		for (let i = 0; i < textNodes.length; i++) {
 			tempText.push(textNodes[i].data)
-			textNodes[i].data = "";
-			
+			textNodes[i].data = "";	
 		}
 	}
 	for (i of dummyElement.children) {description.append(i)}
@@ -179,8 +176,8 @@ function bus1(){
 	name2.innerHTML = "Bus Driver";
 	info2.style.color = "#132575";
 	info2.innerHTML = "Age: 63<br>Likes raw chicken.";
-	writeDialog('<b><span style="color:#132575">...</span></b>');
-	getChoices(["<i>sit down and ride to school</i>"],[schoolArrival]);
+	writeDialog('<b><span style="color:#132575">..........</span></b>');
+	getChoices(["<i>sit down</i>"],[schoolArrival]);
 }
 
 function schoolArrival(){
