@@ -68,8 +68,7 @@ function eggsBreakfast(){
 }
 
 function nothingBreakfast() {
-	writeDialog("<b>you feel airy and light</b>");
-	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
+	writeDialog('<b>you feel airy and light<br><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
 	getChoices(["<i>leave the house</i>"],[busOntime]);
 }
 
@@ -120,7 +119,7 @@ function bedroom2(){
 function street1(){
 	changeBackground("images/street.jpg");
 	name2.innerHTML = "Joe";
-	info2.innerHTML = "Age: 18<br>
+	info2.innerHTML = "Age: 18<br>";
 	changeImg2("images/bully.png);
 }
 
