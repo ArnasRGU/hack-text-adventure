@@ -194,7 +194,7 @@ function corridor1(){
 	changeImg2("");
 	name2.innerHTML = "";
 	writeDialog("<b>First today, Science.</b>")
-	getChoices(["<i>go to science</i>"],[scienceClass]);
+	getChoices(["<i>go to science</i>","<i>skip class</i>"],[scienceClass,skipClass]);
 }
 
 function scienceClass(){
@@ -205,19 +205,42 @@ function scienceClass(){
 	info2.style.color = "#797f99";
 	info2.innerHTML = "Age: 74<br>Stopped caring about his job 40 years ago.";
 	writeDialog('<b><span style="color:#797f99">Cheems, my worst student<br>Anyway, what\'s 2+2?</span></b>');
-	getChoices(["I don't know","1","2","3","5","22"],[principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt]);
+	getChoices(["<i>I don't know</i>","<i>1","<i>2</i>","<i>3</i>","<i>5</i>","<i>22</i>"],[principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt]);
 }
 
 function principalInterrupt() {
 	changeImg2("images/headmaster.png");
 	name2.innerHTML = "HEADMASTER!!!";
-	info2.innerHTML = "PURE RAGE";
+	info2.innerHTML = "AGE:???<br>PURE RAGE";
 	name2.style.color = "#FF0000";
 	info2.style.color = "#FF0000";
-	writeDialog("<b>THE HEAD MASTER KICKS THE DOOR DOWN<span style='color:#FF0000'>CHEEEEEEEEEEEEEEEMS, WHAT ARE YOU TRYING TO DO??!!1!!1</span></b>");
-	getChoices(["I don't know","1","2","3","5","22"],[principalAngry,principalAngry,principalAngry,principalAngry,principalAngry,principalAngry])
+	writeDialog("<b>THE HEAD MASTER KICKS THE DOOR DOWN<br><span style='color:#FF0000'>CHEEEEEEEEEEEEEEEMS, WHAT ARE YOU TRYING TO DO??!!1!!1</span></b>");
+	getChoices(["<i>I don't know</i>","<i>1","<i>2</i>","<i>3</i>","<i>5</i>","<i>22</i>"],[principalAngry,principalAngry,principalAngry,principalAngry,principalAngry,principalAngry])
 }
 
 function principalAngry() {
-	writeDialog("<b><span style='color:#FF0000;font-size:20px'>I DON'T CARE ABOUT YOUR EXCUSE INTO MY OFFICE</span></b>")
+	writeDialog("<b><span style='color:#FF0000;font-size:50px'>I DON'T CARE ABOUT YOUR EXCUSE GET OUT OF MY SCHOOL, YOU ARE EXPELLED</span></b>")
+	getChoices(["<i>leave school</i>"],[leaveSchool]);
 }
+
+function leaveSchool() {
+	changeImg2("");
+	name2.innerHTML = "";
+	info2.innerHTML = "";
+	changeBackground("images/schoolExterior.jpg");
+	setTimeout(function () {
+		writeDialog("<b>\"Weird\"</b>");
+		getChoices(["go home"],[goHome]);
+	},3000)
+}
+
+function goHome() {
+	changeBackground("images/bus.jpg")
+	changeImg2("images/busDriver.png")
+	name2.style.color = "#132575";
+	name2.innerHTML = "Bus Driver";
+	info2.style.color = "#132575";
+	info2.innerHTML = "Age: 63<br>Likes raw chicken.";
+	writeDialog('<b><span style="color:#132575">..........</span></b>');
+}
+
