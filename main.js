@@ -180,7 +180,7 @@ function bus1(){
 	getChoices(["<i>sit down</i>"],[universityOutside]);
 }
 
-function univeristyOutside(){
+function universityOutside(){
 	changeBackground("images/schoolExterior.jpg");
 	changeImg2("");
 	name2.innerHTML = "";
