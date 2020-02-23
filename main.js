@@ -214,13 +214,13 @@ function principalInterrupt() {
 	info2.innerHTML = "AGE:???<br>PURE RAGE";
 	name2.style.color = "#FF0000";
 	info2.style.color = "#FF0000";
-	writeDialog("<b>THE HEAD MASTER KICKS THE DOOR DOWN<br><span style='color:#FF0000'>CHEEEEEEEEEEEEEEEMS, WHAT ARE YOU TRYING TO DO??!!1!!1</span></b>");
+	writeDialog("<b>The headmaster kicks the door down, bursting into the room.<br><span style='color:#FF0000'>CHEEEEEEEEEEEEEEEMS, WHAT ARE YOU TRYING TO DO??!!1!!1</span></b>");
 	getChoices(["<i>I don't know</i>","<i>1","<i>2</i>","<i>3</i>","<i>5</i>","<i>22</i>"],[principalAngry,principalAngry,principalAngry,principalAngry,principalAngry,principalAngry])
 }
 
 function principalAngry() {
-	writeDialog("<b><span style='color:#FF0000;font-size:50px'>I DON'T CARE ABOUT YOUR EXCUSE GET OUT OF MY SCHOOL, YOU ARE EXPELLED</span></b>")
-	getChoices(["<i>leave school</i>"],[leaveSchool]);
+	writeDialog("<b><span style='color:#FF0000;font-size:50px'>I DON'T CARE ABOUT YOUR EXCUSE, GET OUT OF MY SCHOOL</span></b>")
+	getChoices(["<i>leave the school</i>"],[leaveSchool]);
 }
 
 function leaveSchool() {
@@ -229,7 +229,7 @@ function leaveSchool() {
 	info2.innerHTML = "";
 	changeBackground("images/schoolExterior.jpg");
 	setTimeout(function () {
-		writeDialog("<b>\"Weird\"</b>");
+		writeDialog("<b>\"That was odd\"</b>");
 		getChoices(["go home"],[goHome]);
 	},3000)
 }
