@@ -54,14 +54,12 @@ function kitchen1(){
 }
 
 function sugarpuffsBreakfast(){
-	writeDialog('<b>"Sugar Puffs®, the nectar of gods." </b>');
-	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
+	writeDialog('<b>"Sugar Puffs®, the nectar of gods."<span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
 	getChoices(["<i>leave the house</i>"],[busOntime]);
 }
 
 function eggsBreakfast(){
-	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."</b>');
-	writeDialog('<b><span style="color:#b0378a">You had better be leav-</span></b>');
+	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."<span style="color:#b0378a">You had better be leav-</span></b>');
 	changeImg2("images/cheemsMotherCry.png");
 	writeDialog("<b>It's no wonder Dad left us, you can't even cook scrambled eggs properly!</b>");
 	getChoices(["<i>leave the house</i>"],[busLate]);
@@ -100,8 +98,7 @@ function kitchen2(){
 }
 
 function kitchen3(){
-	writeDialog("<b>I'm sorry Mother. I'll make it up to you tomorrow.</b>");
-	writeDialog("<b>~END~</b>");
+	writeDialog("<b>I'm sorry Mother. I'll make it up to you tomorrow.<br>~END~</b>");
 }
 
 function bedroom2(){
@@ -109,11 +106,7 @@ function bedroom2(){
 	changeImg2("");
 	name2.innerHTML = "";
 	info2.innerHTML = "";
-	writeDialog("<b>07:36am. Uni successfully dodged, once again.</b>");
-	writeDialog('<b>"Why would I want to live any other way? I get to spend all day doing whatever I want, with no responsibilities, all while being waited on by my adoring mother."</b>');
-	writeDialog("<b>Cheems unearthes his laptop from the floor and brings it up to his bed.</b>");
-	writeDialog('<b>"Now, where was I - www.por-"</b>');
-	writeDialog("<b>~GOOD END?~</B>");
+	writeDialog('<b>07:36am. Uni successfully dodged, once again.<br>"Why would I want to live any other way? I get to spend all day doing whatever I want, with no responsibilities, all while being waited on by my adoring mother."<br>Cheems unearthes his laptop from the floor and brings it up to his bed.<br>"Now, where was I - www.por-"<br>~GOOD END?~</B>");
 }
 
 function street1(){
