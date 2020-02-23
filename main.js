@@ -204,5 +204,20 @@ function scienceClass(){
 	name2.innerHTML = "Science Teacher";
 	info2.style.color = "#797f99";
 	info2.innerHTML = "Age: 74<br>Stopped caring about his job 40 years ago.";
-	writeDialog('<b><span style="color:#797f99">E=mcheems</span></b>');
+	writeDialog('<b><span style="color:#797f99">Cheems, my worst student<br>Anyway, what\'s 2+2?</span></b>');
+	getChoices(["I don't know","1","2","3","5","22"],[principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt]);
+}
+
+function principalInterrupt() {
+	changeImg2("images/headmaster.png");
+	name2.innerHTML = "HEADMASTER!!!";
+	info2.innerHTML = "PURE RAGE";
+	name2.style.color = "#FF0000";
+	info2.style.color = "#FF0000";
+	writeDialog("<b>THE HEAD MASTER KICKS THE DOOR DOWN<span style='color:#FF0000'>CHEEEEEEEEEEEEEEEMS, WHAT ARE YOU TRYING TO DO??!!1!!1</span></b>");
+	getChoices(["I don't know","1","2","3","5","22"],[principalAngry,principalAngry,principalAngry,principalAngry,principalAngry,principalAngry])
+}
+
+function principalAngry() {
+	writeDialog("<b><span style='color:#FF0000;font-size:20px'>I DON'T CARE ABOUT YOUR EXCUSE INTO MY OFFICE</span></b>")
 }
