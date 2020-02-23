@@ -193,7 +193,7 @@ function corridor1(){
 	changeBackground("images/schoolCorridor.jpg");
 	changeImg2("");
 	name2.innerHTML = "";
-	writeDialog("<b>first today, science</b>")
+	writeDialog("<b>First today, Science</b>")
 	getChoices(["<i>go to science</i>"],[scienceClass]);
 }
 
