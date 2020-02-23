@@ -27,6 +27,7 @@ function slowlyPrintText(stringArray,textNodes,stringIndex=0, i=0) {
 		} else {
 			textNodes[stringIndex].data += stringArray[stringIndex][i];
 			setTimeout(function () {
+				dialogBox.scrollBy(0,1000);
 				slowlyPrintText(stringArray,textNodes,stringIndex,i+1);
 			},20);
 		}
