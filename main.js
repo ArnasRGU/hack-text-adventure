@@ -193,7 +193,24 @@ function corridor1(){
 	changeBackground("images/schoolCorridor.jpg");
 	changeImg2("");
 	name2.innerHTML = "";
-	writeDialog("<b>First today, Science.</b>")
+	writeDialog("<b>First, Art.</b>")
+	getChoices(["<i>go to art class</i>"],[artClass]);
+}
+
+function artClass(){
+	changeBackground("images/classroomArt.jpg");
+	changeImg2("images/teacherArt.png");
+	name2.style.color = "#4feb34";
+	name2.innerHTML = "Art Teacher";
+	info2.style.color = "#4feb34";
+	info2.innerHTML = "Age: 27<br>Hates children.";
+}
+
+function corridor2(){
+	changeBackground("images/schoolCorridor.jpg");
+	changeImg2("");
+	name2.innerHTML = "";
+	writeDialog("<b>Second today, Science.</b>")
 	getChoices(["<i>go to science</i>"],[scienceClass]);
 }
 
