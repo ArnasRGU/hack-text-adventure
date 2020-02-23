@@ -39,7 +39,7 @@ function getChoices(choicesArr, callbacksArr) {
 
 function bedroom1(){
 	writeDialog("You awake")
-	getChoices(["<i>go down stairs</i>","<i>stay in bed</i>],[kitchen1,bedroom1]);
+	getChoices(["<i>go down stairs</i>","<i>stay in bed</i>"],[kitchen1,bedroom1]);
 }	
 
 bedroom1();
