@@ -128,7 +128,7 @@ function busOntime() {
 	info2.innerHTML = "";
 	changeBackground("images/houseExterior.jpg");
 	writeDialog("<b>the airs smells good</b>")
-	getChoices(["<i>go to get the bus</i>"], [busScene]);
+	getChoices(["<i>go to get the bus</i>"], [bus1]);
 }
 
 function kitchen2(){
@@ -154,24 +154,35 @@ function bedroom2(){
 
 function street1(){
 	changeBackground("images/street.jpg");
+	writeDialog("<b>This bus stop was in a part of town that Cheems rarely visited. Someone was standing at the bus stop. It was Joe.</b>");
 	name2.style.color = "#ff0000";
 	name2.innerHTML = "Joe";
 	info2.style.color = "#ff0000";
-	info2.innerHTML = "Age: 18<br>";
+	info2.innerHTML = "Age: 18<br>Has no father figure.";
 	changeImg2("images/bully.png");
+	writeDialog('<b><span style="color:#ff0000">"Hey, look who it is. Little baby Cheems! Still living at home? Hahaha!"</span><br>Cheems hates Joe with a burning passion.</b>');
+	getChoices(["<i>insult him</i>","<i>punch him</i>"], [street2,street3]);
 }
 
-function busScene() {
+function street2(){
+	writeDialog("<b>At least I know my father!<br>This struck a nerve with Joe, causing him to run away crying.<br>The bus arrives.</b>");
+	getchoices(["get on bus"], [bus1]);
+}
+
+function street3(){
+	writeDialog("<b>Joe punches back. Hard.<br>You are knocked out and left lying on the pavement.<br>~BAD END~<b/>");
+}
+
+function bus1() {
 	changeBackground("images/bus.jpg")
 	changeImg2("images/busDriver.png")
 	name2.style.color = "#132575";
 	name2.innerHTML = "Bus Driver";
 	info2.style.color = "#132575";
 	info2.innerHTML = "Age: 63<br>Likes raw chicken.";
-	writeDialog('<b><span style="color:#132575">...</span></b>')
+	writeDialog('<b><span style="color:#132575">...</span></b>');
 	getChoices(["<i>sit down and ride to school</i>"],[schoolArrival]);
 }
-
 
 function schoolArrival() {
 	changeBackground("images/schoolExterior.jpg");
