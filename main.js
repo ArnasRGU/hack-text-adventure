@@ -4,16 +4,11 @@ charImg2 = gel("img2");
 description = gel("description");
 choices = gel("choices");
 
-
 domBody = document.body
 
 function changeBackground(path) {
 	domBody.background = path;
 }
-
-name1.innerHTML += "Cheems";
-
-changeBackground("images/bedroom.jpg")
 
 function changeImg2(path) {
 	charImg2.src = path;
@@ -79,56 +74,90 @@ function getChoices(choicesArr, callbacksArr) {
 	}
 }
 
-writeDialog("<b>7:00am. The morning sun filters in through the blinds, basking your bedroom in a golden glow.<br>Your feet crunch on a decades worth of discarded cans as you shuffle off your bed.</b>");
+name1.innerHTML += "Cheems";
+info1.innerHTML += "Age: 34<br>Still lives with his mother.";
+changeBackground("images/bedroom.jpg")
+
+writeDialog("<b>07:00am. The morning sun filters in through the blinds, basking your bedroom in a golden glow.<br>Your feet crunch on a decades worth of discarded cans as you shuffle off your bed.</b>");
 getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom1]);
 
 function bedroom1(){
 	writeDialog('<b>"Uni starts in an hour, I had better get up."</b>');
-	getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom1]);
+	getChoices(["<i>head down stairs</i>"],[kitchen1]);
 }	
 		    
 function kitchen1(){
 	changeBackground("images/kitchen.jpg");
 	changeImg2("images/cheemsMother.png");
 	name2.innerHTML = "Cheems Mother";
+	info2.innerHTML = "Age: 51<br>Can't cook scrambled eggs.";
 	writeDialog('<b><span style="color:#b0378a">H-hey Cheems, I hope you slept well.<br>What do you want for breakfast?</span></b>')
-	getChoices(["<i>sugar puffs®</i>","<i>scrambled eggs</i>", "<i>nothing</i>"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
+	getChoices(["<i>sugar puffs®</i>","<i>scrambled eggs</i>", "<i>nothing</i>"],[sugarpuffsBreakfast,eggsBreakfast,nothingBreakfast]);
 }
 
-function cerealBreakfast(){
-	writeDialog('<b>"Sugar Puffs®, the nectar of gods." </b>');
-	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
-	getChoices(["<i>leave the house</i>"],[frontYardGood]);
+function sugarpuffsBreakfast(){
+	writeDialog('<b>"Sugar Puffs®, the nectar of gods."<br><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
+	getChoices(["<i>leave the house</i>"],[busOntime]);
 }
 
-function beefJerkyBreakfast() {
-	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."</b>');
-	writeDialog('<b><span style="color:#b0378a">You had better be leav-</span></b>');
+function eggsBreakfast(){
+	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."<br><span style="color:#b0378a">You had better be leav-</span></b>');
 	changeImg2("images/cheemsMotherCry.png");
 	writeDialog("<b>It's no wonder Dad left us, you can't even cook scrambled eggs properly!</b>");
-	getChoices(["<i>leave the house</i>"],[frontYardBad]);
+	getChoices(["<i>leave the house</i>"],[busLate]);
 }
 
 function nothingBreakfast() {
-	writeDialog("<b>you feel airy and light</b>");
-	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
-	getChoices(["<i>leave the house</i>"],[frontYardGood]);
+	writeDialog('<b>you feel airy and light<br><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
+	getChoices(["<i>leave the house</i>"],[busOntime]);
 }
 
-function frontYardBad() {
+function busLate() {
 	changeImg2("");
 	name2.innerHTML = "";
+	info2.innerHTML = "";
 	changeBackground("images/houseExterior.jpg");
-	writeDialog("<b>you missed the bus</b>")
-	getChoices(["<i>quit life</i>"],[console.log]);
+	writeDialog("<b>Due to your argument with Mother, you have missed the bus.<br>You may be able to catch it before it reaches it's next stop.</b>")
+	getChoices(["<i>run to the next bus stop</i>","<i>return home</i>"],[street1,kitchen2]);
 }
 
-function frontYardGood() {
+function busOntime() {
 	name2.innerHTML = "";
 	changeImg2("");
+	info2.innerHTML = "";
 	changeBackground("images/houseExterior.jpg");
 	writeDialog("<b>the airs smells good</b>")
 	getChoices(["<i>go to get the bus</i>"], [busScene]);
+}
+
+function kitchen2(){
+	changeBackground("images/kitchen.jpg");
+	changeImg2("images/cheemsMotherCry.png");
+	name2.innerHTML = "Cheems Mother";
+	info2.innerHTML = "Age: 51<br>Can't cook scrambled eggs.";
+	writeDialog("<b>Your mother is still crying.</b>");
+	getChoices(["<i>comfort her</i>","<i>return to bedroom</i>"], [kitchen3,bedroom2]);
+}
+
+function kitchen3(){
+	writeDialog("<b>I'm sorry Mother. I'll make it up to you tomorrow.<br>~END~</b>");
+}
+
+function bedroom2(){
+	changeBackground("images/bedroom.jpg")
+	changeImg2("");
+	name2.innerHTML = "";
+	info2.innerHTML = "";
+	writeDialog('<b>07:36am. Uni successfully dodged, once again.<br>"Why would I want to live any other way? I get to spend all day doing whatever I want, with no responsibilities, all while being waited on by my adoring mother."<br>Cheems unearthes his laptop from the floor and brings it up to his bed.<br>"Now, where was I - www.por-"<br>~GOOD END?~</B>');
+}
+
+function street1(){
+	changeBackground("images/street.jpg");
+	name2.style.color = "#ff0000";
+	name2.innerHTML = "Joe";
+	info2.style.color = "#ff0000";
+	info2.innerHTML = "Age: 18<br>";
+	changeImg2("images/bully.png");
 }
 
 function busScene() {
@@ -136,6 +165,8 @@ function busScene() {
 	changeImg2("images/busDriver.png")
 	name2.style.color = "#132575";
 	name2.innerHTML = "Bus Driver";
+	info2.style.color = "#132575";
+	info2.innerHTML = "Age: 63<br>Likes raw chicken.";
 	writeDialog('<b><span style="color:#132575">...</span></b>')
 	getChoices(["<i>sit down and ride to school</i>"],[schoolArrival]);
 }
@@ -145,6 +176,7 @@ function schoolArrival() {
 	changeBackground("images/schoolExterior.jpg");
 	changeImg2("");
 	name2.innerHTML = "";
+	info2.innerHTML = "";
 	writeDialog("<b>Aberdeen University...</b>");
 	getChoices(["<i>go inside</i>"],[goInsideSchoolReal]);
 }
