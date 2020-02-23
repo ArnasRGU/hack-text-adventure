@@ -120,7 +120,7 @@ function street1(){
 	changeBackground("images/street.jpg");
 	name2.innerHTML = "Joe";
 	info2.innerHTML = "Age: 18<br>";
-	changeImg2("images/bully.png);
+	changeImg2("images/bully.png");
 }
 
 function busScene() {
