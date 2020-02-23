@@ -1,17 +1,60 @@
 body{
 	background-repeat: no-repeat;
 	background-size: cover;
-	font-family: Comic Sans MS;
-	
+	font-family: Comic Sans MS;	
+}
+
+#img1, #img2{
+	filter: drop-shadow(0px 0px 10px #1e1e1e);
 }
 
 #img1{
-	filter: drop-shadow(0px 0px 10px #1e1e1e);
 	float: left;
 }
 
 #img2{
+	float: right;
+}
+
+#name1div, #name2div{
+	width: 30%;
+	background-color:rgba(255,255,255,0.6);
 	filter: drop-shadow(0px 0px 10px #1e1e1e);
+	border-radius: 10px;
+	text-align: center;
+}
+
+#name1div{
+	float: left;
+}
+
+#name2div{
+	float: right;
+}
+
+#name1, #name2{
+	padding-left: 2%;
+	padding-right: 2%;
+	font-size: 25px;
+}
+
+#name2{
+	color: #b0378a;
+}
+
+#info1, #info2{
+	width: 30%;
+	background-color:rgba(255,255,255,0.6);
+	filter: drop-shadow(0px 0px 10px #1e1e1e);
+	border-radius: 10px;
+	text-align: center;
+}
+
+#info1{
+	float: left;
+}
+
+#info2{
 	float: right;
 }
 
@@ -24,38 +67,6 @@ body{
 	filter: drop-shadow(0px 0px 10px #1e1e1e);
 }
 
-
-#name1div{
-	filter: drop-shadow(0px 0px 10px #1e1e1e);
-	background-color:rgba(255,255,255,0.6);
-	float: left;
-	width: 30%;
-	border-radius: 10px;
-	text-align: center;
-}
-
-#name2div{
-	filter: drop-shadow(0px 0px 10px #1e1e1e);
-	float: right;
-	background-color:rgba(255,255,255,0.6);
-	width: 30%;
-	border-radius: 10px;
-	text-align: center;
-}
-
-#name1{
-	padding-left: 2%;
-	padding-right: 2%;
-	font-size: 25px;
-}
-
-#name2{
-	padding-left: 2%;
-	padding-right: 2%;
-	font-size: 25px;
-	color: #b0378a;
-}
-
 #description{
 	padding-left: 2%;
 	padding-right: 2%;
@@ -63,14 +74,14 @@ body{
 }
 
 button{
-	background-color:rgba(255,255,255,0.6);
-	border-radius: 10px;
-	font-weight: bold;
-	filter: drop-shadow(0px 0px 2px #1e1e1e);
 	padding-left: 5%;
 	padding-right: 5%;
 	padding-top: 2%;
 	padding-bottom: 2%;
+	background-color:rgba(255,255,255,0.6);
+	border-radius: 10px;
+	font-weight: bold;
+	filter: drop-shadow(0px 0px 2px #1e1e1e);
 	font-size: 20px;
 }
 
