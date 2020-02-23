@@ -78,7 +78,7 @@ function busLate() {
 	name2.innerHTML = "";
 	info2.innerHTML = "";
 	changeBackground("images/houseExterior.jpg");
-	writeDialog("<b>Due to your argument with Mother, you have missed the bus.<br>You may be able to catch it at before it reaches it's next stop.</b>")
+	writeDialog("<b>Due to your argument with Mother, you have missed the bus.<br>You may be able to catch it before it reaches it's next stop.</b>")
 	getChoices(["<i>run to the next bus stop</i>","return home"],[street1,kitchen2]);
 }
 
