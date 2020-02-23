@@ -148,7 +148,7 @@ function bedroom2(){
 	changeImg2("");
 	name2.innerHTML = "";
 	info2.innerHTML = "";
-	writeDialog('<b>07:36am. Uni successfully dodged, once again.<br>"Why would I want to live any other way? I get to spend all day doing whatever I want, with no responsibilities, all while being waited on by my adoring mother."<br>Cheems unearthes his laptop from the floor and brings it up to his bed.<br>"Now, where was I - www.por-"<br>~GOOD END?~</B>');
+	writeDialog('<b>07:36am. Uni successfully dodged, once again.<br>"Why would I want to live any other way? I get to spend all day doing whatever I want, with no responsibilities, all while being waited on by my adoring mother."<br>Cheems unearthes his laptop from the floor and brings it up to his bed.<br>"Now, where was I - www.por-"<br>~GOOD ENDING?~</B>');
 }
 
 function street1(){
@@ -169,7 +169,7 @@ function street2(){
 }
 
 function street3(){
-	writeDialog("<b>Joe punches back. Hard.<br>You are knocked out and left lying on the pavement.<br>~BAD END~<b/>");
+	writeDialog("<b>Joe punches back. Hard.<br>You are knocked out and left lying on the pavement.<br>~BAD ENDING~<b/>");
 }
 
 function bus1(){
@@ -190,10 +190,6 @@ function schoolArrival(){
 	info2.innerHTML = "";
 	writeDialog("<b>Aberdeen University...</b>");
 	getChoices(["<i>go inside</i>"],[goInsideSchoolReal]);
-}
-
-function goInsideSchoolFake(){
-	
 }
 
 function goInsideSchoolReal(){
