@@ -48,6 +48,7 @@ function kitchen1(){
 	changeBackground("images/kitchen.jpg");
 	changeImg2("images/cheemsMother.png");
 	name2.innerHTML = "Cheems Mother";
+	info2.innerHTML = "Age: 51<br>Can't cook scrambled eggs.";
 	writeDialog('<b><span style="color:#b0378a">H-hey Cheems, I hope you slept well.<br>What do you want for breakfast?</span></b>')
 	getChoices(["<i>sugar puffs®</i>","<i>scrambled eggs</i>", "<i>nothing</i>"],[sugarpuffsBreakfast,eggsBreakfast,nothingBreakfast]);
 }
