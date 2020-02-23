@@ -101,7 +101,8 @@ function kitchen2(){
 }
 
 function kitchen3(){
-
+	writeDialog("<b>I'm sorry Mother. I'll make it up to you tomorrow.</b>");
+	writeDialog("<b>~END~</b>");
 }
 
 function bedroom2(){
@@ -112,13 +113,15 @@ function bedroom2(){
 	writeDialog("<b>07:36am. Uni successfully dodged, once again.</b>");
 	writeDialog('<b>"Why would I want to live any other way? I get to spend all day doing whatever I want, with no responsibilities, all while being waited on by my adoring mother."</b>');
 	writeDialog("<b>Cheems unearthes his laptop from the floor and brings it up to his bed.</b>");
-	writeDialog('<b>"Now, where was I - www.po-"</b>');
-	//description.innerHTML = "larger";
-	writeDialog("<b>~GOOD END...?~</B>");
+	writeDialog('<b>"Now, where was I - www.por-"</b>');
+	writeDialog("<b>~GOOD END?~</B>");
 }
 
 function street1(){
 	changeBackground("images/street.jpg");
+	name2.innerHTML = "Joe";
+	info2.innerHTML = "Age: 18<br>
+	changeImg2("images/bully.png);
 }
 
 function busScene() {
