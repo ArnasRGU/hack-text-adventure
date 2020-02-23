@@ -145,7 +145,7 @@ function bedroom2(){
 	changeImg2("");
 	name2.innerHTML = "";
 	info2.innerHTML = "";
-	writeDialog('<b>07:36am. Uni successfully dodged, once again.<br>"Why would I want to live any other way? I get to spend all day doing whatever I want, with no responsibilities."<br>Cheems sits down at his computer to have yet another very productive day.<br>~GOOD ENDING?~</B>');
+	writeDialog('<b>07:36am. Uni successfully dodged, once again.<br>"Why would I want to live any other way?"<br>Cheems sits down at his computer to have yet another very productive day.<br>~GOOD ENDING?~</B>');
 }
 
 function street1(){
