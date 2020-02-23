@@ -4,16 +4,11 @@ charImg2 = gel("img2");
 description = gel("description");
 choices = gel("choices");
 
-
 domBody = document.body
 
 function changeBackground(path) {
 	domBody.background = path;
 }
-
-name1.innerHTML += "Cheems";
-
-changeBackground("images/bedroom.jpg")
 
 function changeImg2(path) {
 	charImg2.src = path;
@@ -36,6 +31,10 @@ function getChoices(choicesArr, callbacksArr) {
 		choices.appendChild(choice);
 	}
 }
+
+name1.innerHTML += "Cheems";
+info1.innerHTML += "Age: 34<br>Still lives with his mother.";
+changeBackground("images/bedroom.jpg")
 
 writeDialog("<b>7:00am. The morning sun filters in through the blinds, basking your bedroom in a golden glow.<br>Your feet crunch on a decades worth of discarded cans as you shuffle off your bed.</b>");
 getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom1]);
