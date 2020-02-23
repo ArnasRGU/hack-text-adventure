@@ -104,6 +104,7 @@ function busScene() {
 	changeImg2("images/busDriver.png")
 	name2.style.color = "#132575";
 	name2.innerHTML = "Bus Driver";
+	info2.style.color = "#132575";
 	info2.innerHTML = "Age: 63<br>Likes raw chicken.";
 	writeDialog('<b><span style="color:#132575">...</span></b>')
 	getChoices(["<i>sit down and ride to school</i>"],[schoolArrival]);
