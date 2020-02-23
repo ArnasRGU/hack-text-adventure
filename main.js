@@ -166,7 +166,7 @@ function street1(){
 
 function street2(){
 	writeDialog("<b>At least I know my father!<br>This struck a nerve with Joe, causing him to run away crying.<br>The bus arrives.</b>");
-	getChoices(["<i>get on bus"</i>], [bus1]);
+	getChoices(["<i>get on bus</i>"], [bus1]);
 }
 
 function street3(){
