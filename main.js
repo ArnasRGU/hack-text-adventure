@@ -97,7 +97,7 @@ function kitchen2(){
 	name2.innerHTML = "Cheems Mother";
 	info2.innerHTML = "Age: 51<br>Can't cook scrambled eggs.";
 	writeDialog("<b>Your mother is still crying.</b>");
-	getChoices["<i>comfort her</i>","<i>return to bedroom</i>"], [kitchen3,bedroom2]);
+	getChoices(["<i>comfort her</i>","<i>return to bedroom</i>"], [kitchen3,bedroom2]);
 }
 
 function kitchen3(){
