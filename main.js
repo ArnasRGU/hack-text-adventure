@@ -103,7 +103,7 @@ function sugarpuffsBreakfast(){
 
 function eggsBreakfast(){
 	changeImg2("images/cheemsMotherCry.png");
-	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."<br><span style="color:#b0378a">You had better be leav-</span><br>Its no wonder Dad left us, you cant even cook scrambled eggs properly!</b>");
+	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."<br><span style="color:#b0378a">You had better be leav-</span><br>Its no wonder Dad left us, you cant even cook scrambled eggs properly!</b>');
 	getChoices(["<i>leave the house</i>"],[busLate]);
 }
 
