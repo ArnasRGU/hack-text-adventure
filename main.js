@@ -55,7 +55,7 @@ function kitchen1(){
 
 function cerealBreakfast(){
 	writeDialog('<b>"Sugar Puffs®, the nectar of gods." </b>');
-	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, don\'\t want to miss your bus.</span></b>');
+	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, don\'\t\ want to miss your bus.</span></b>');
 	getChoices(["<i>leave the house</i>"],[frontYardGood]);
 
 }
