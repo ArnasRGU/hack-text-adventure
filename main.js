@@ -66,7 +66,7 @@ function beefJerkyBreakfast() {
 }
 
 function nothingBreakfast() {
-	writeDialog("<b>you feel airy and light"</b>);
+	writeDialog("<b>you feel airy and light</b>");
 	writeDialog('<b><span style="color:#b0378a">Time for school honey</span></b>');
 	getChoices(["<i>go out the door</i>"],[frontYardGood]);
 }
