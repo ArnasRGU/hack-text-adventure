@@ -154,7 +154,7 @@ function bedroom2(){
 
 function street1(){
 	changeBackground("images/street.jpg");
-	writeDialog("<b>This bus stop was in a part of town that Cheems rarely visited. Someone was standing at the bus stop. It was Joe.</b>");
+	writeDialog("<b>This bus stop was in a part of town that Cheems rarely visited. Someone was standing at the bus stop. It was Joe.<br></b>");
 	name2.style.color = "#ff0000";
 	name2.innerHTML = "Joe";
 	info2.style.color = "#ff0000";
