@@ -114,7 +114,7 @@ function schoolArrival() {
 	changeBackground("images/schoolExterior.jpg");
 	changeImg2("");
 	name2.innerHTML = "";
-	info2.innerHTML = "":
+	info2.innerHTML = "";
 	writeDialog("<b>Aberdeen University...</b>");
 	getChoices(["<i>go inside</i>"],[goInsideSchoolReal]);
 }
