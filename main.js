@@ -38,13 +38,13 @@ function getChoices(choicesArr, callbacksArr) {
 }
 
 function bedroom1(){
-	writeDialog("You awake")
+	writeDialog(<b>"You awake"</b>);
 	getChoices(["<i>go down stairs</i>","<i>stay in bed</i>"],[kitchen1,bedroom1]);
 }	
 
 bedroom1();
 		    
-function kitchen1() {
+function kitchen1(){
 	changeBackground("images/kitchen.jpg");
 	changeSpeakingCharacter("images/cheemsMother.png");
 	name2.innerHTML = "Cheems Mother";
@@ -52,7 +52,7 @@ function kitchen1() {
 	getChoices(["<i>cereal</i>","<i>beef jerky</i>", "<i>nothing</i>"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
 }
 
-function cerealBreakfast() {
+function cerealBreakfast(){
 	writeDialog("A fufilling meal, you feel full");
 	writeDialog('<span style="color:#b0378a">Time for school honey</span>');
 	getChoices(["<i>go out the door</i>"],[frontYardGood]);
