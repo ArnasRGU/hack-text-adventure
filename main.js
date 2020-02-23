@@ -177,23 +177,23 @@ function bus1(){
 	info2.style.color = "#132575";
 	info2.innerHTML = "Age: 63<br>Likes raw chicken.";
 	writeDialog('<b><span style="color:#132575">..........</span></b>');
-	getChoices(["<i>sit down</i>"],[schoolArrival]);
+	getChoices(["<i>sit down</i>"],[universityOutside]);
 }
 
-function schoolArrival(){
+function univeristyOutside(){
 	changeBackground("images/schoolExterior.jpg");
 	changeImg2("");
 	name2.innerHTML = "";
 	info2.innerHTML = "";
 	writeDialog("<b>Aberdeen University...</b>");
-	getChoices(["<i>go inside</i>"],[goInsideSchoolReal]);
+	getChoices(["<i>go inside</i>"],[corridor1]);
 }
 
-function goInsideSchoolReal(){
+function corridor1(){
 	changeBackground("images/schoolCorridor.jpg");
 	changeImg2("");
 	name2.innerHTML = "";
-	writeDialog("<b>first on the rota, science</b>")
+	writeDialog("<b>first today, science</b>")
 	getChoices(["<i>go to science</i>"],[scienceClass]);
 }
 
