@@ -41,7 +41,7 @@ getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom
 
 function bedroom1(){
 	writeDialog('<b>"Uni starts in an hour, I had better get up."</b>');
-	getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom1]);
+	getChoices(["<i>head down stairs</i>"],[kitchen1]);
 }	
 		    
 function kitchen1(){
