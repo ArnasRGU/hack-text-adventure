@@ -42,7 +42,7 @@ body{
 	color: #b0378a;
 }
 
-#info1, #info2{
+#info1div, #info2div{
 	width: 30%;
 	background-color:rgba(255,255,255,0.6);
 	filter: drop-shadow(0px 0px 10px #1e1e1e);
@@ -50,12 +50,22 @@ body{
 	text-align: center;
 }
 
-#info1{
+#info1div{
 	float: left;
 }
 
-#info2{
+#info2div{
 	float: right;
+}
+
+#info1, #info2{
+	padding-left: 2%;
+	padding-right: 2%;
+	font-size: 15px;
+}
+
+#info2{
+	color: #b0378a;
 }
 
 #dialogBox {
