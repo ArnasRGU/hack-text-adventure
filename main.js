@@ -15,7 +15,7 @@ name1.innerHTML += "Cheems";
 
 changeBackground("images/bedroom.jpg")
 
-function changeSpeakingCharacter(path) {
+function changeImg2(path) {
 	charImg2.src = path;
 }
 
@@ -55,21 +55,22 @@ function kitchen1(){
 
 function cerealBreakfast(){
 	writeDialog('<b>"Sugar Puffs®, the nectar of gods." </b>');
-	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, don\'\t\ want to miss your bus.</span></b>');
+	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
 	getChoices(["<i>leave the house</i>"],[frontYardGood]);
-
 }
 
 function beefJerkyBreakfast() {
 	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."</b>');
-	writeDialog('<b><span style="color:#b0378a">Time for school honey</span></b>');
-	getChoices(["<i>go out the door</i>"],[frontYardBad]);
+	writeDialog('<b><span style="color:#b0378a">You had better be leav-</span></b>');
+	changeImg2("images/cheemsMotherCry.png");
+	writeDialog("<b>It's no wonder Dad left us, you can't even cook scrambled eggs properly!</b>);
+	getChoices(["<i>leave the house</i>"],[frontYardBad]);
 }
 
 function nothingBreakfast() {
 	writeDialog("<b>you feel airy and light</b>");
-	writeDialog('<b><span style="color:#b0378a">Time for school honey</span></b>');
-	getChoices(["<i>go out the door</i>"],[frontYardGood]);
+	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
+	getChoices(["<i>leave the house</i>"],[frontYardGood]);
 }
 
 function frontYardBad() {
