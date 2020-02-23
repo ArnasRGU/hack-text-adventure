@@ -204,7 +204,7 @@ function scienceClass(){
 	name2.innerHTML = "Science Teacher";
 	info2.style.color = "#797f99";
 	info2.innerHTML = "Age: 74<br>Stopped caring about his job 40 years ago.";
-	writeDialog('<b><span style="color:#797f99">Cheems, my worst student<br>Anyway, what\'s 2+2?</span></b>');
+	writeDialog('<b><span style="color:#797f99">Welcome Cheems, my least favourite student. Im going to test you with a question you will struggle to answer.<br>What<br>is<br>2+2?</span></b>');
 	getChoices(["<i>I don't know</i>","<i>1","<i>2</i>","<i>3</i>","<i>5</i>","<i>22</i>"],[principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt,principalInterrupt]);
 }
 
