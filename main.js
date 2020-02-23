@@ -108,7 +108,7 @@ function eggsBreakfast(){
 }
 
 function nothingBreakfast() {
-	writeDialog('<b>you feel airy and light<br><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
+	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
 	getChoices(["<i>leave the house</i>"],[busOntime]);
 }
 
