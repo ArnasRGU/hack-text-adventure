@@ -47,7 +47,7 @@ function bedroom1(){
 		    
 function kitchen1(){
 	changeBackground("images/kitchen.jpg");
-	changeSpeakingCharacter("images/cheemsMother.png");
+	changeImg2("images/cheemsMother.png");
 	name2.innerHTML = "Cheems Mother";
 	writeDialog('<b><span style="color:#b0378a">H-hey Cheems, I hope you slept well.<br>What do you want for breakfast?</span></b>')
 	getChoices(["<i>sugar puffs®</i>","<i>scrambled eggs</i>", "<i>nothing</i>"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
