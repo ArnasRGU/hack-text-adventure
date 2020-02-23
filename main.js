@@ -166,14 +166,14 @@ function street1(){
 
 function street2(){
 	writeDialog("<b>At least I know my father!<br>This struck a nerve with Joe, causing him to run away crying.<br>The bus arrives.</b>");
-	getchoices(["get on bus"], [bus1]);
+	getChoices(["<i>get on bus"</i>], [bus1]);
 }
 
 function street3(){
 	writeDialog("<b>Joe punches back. Hard.<br>You are knocked out and left lying on the pavement.<br>~BAD END~<b/>");
 }
 
-function bus1() {
+function bus1(){
 	changeBackground("images/bus.jpg")
 	changeImg2("images/busDriver.png")
 	name2.style.color = "#132575";
