@@ -202,5 +202,7 @@ function scienceClass(){
 	changeImg2("images/teacherScience.png");
 	name2.style.color = "#797f99";
 	name2.innerHTML = "Science Teacher";
+	info2.style.color = "#797f99";
+	info2.innerHTML = "Age: 74<br>Stopped caring about his job 40 years ago.";
 	writeDialog('<b><span style="color:#797f99">E=mcheems</span></b>');
 }
