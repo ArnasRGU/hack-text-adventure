@@ -194,7 +194,7 @@ function corridor1(){
 	changeImg2("");
 	name2.innerHTML = "";
 	writeDialog("<b>First today, Science.</b>")
-	getChoices(["<i>go to science</i>","<i>skip class</i>"],[scienceClass,skipClass]);
+	getChoices(["<i>go to science</i>"],[scienceClass]);
 }
 
 function scienceClass(){
