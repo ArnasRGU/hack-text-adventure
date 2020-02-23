@@ -36,7 +36,7 @@ name1.innerHTML += "Cheems";
 info1.innerHTML += "Age: 34<br>Still lives with his mother.";
 changeBackground("images/bedroom.jpg")
 
-writeDialog("<b>07.00am. The morning sun filters in through the blinds, basking your bedroom in a golden glow.<br>Your feet crunch on a decades worth of discarded cans as you shuffle off your bed.</b>");
+writeDialog("<b>07:00am. The morning sun filters in through the blinds, basking your bedroom in a golden glow.<br>Your feet crunch on a decades worth of discarded cans as you shuffle off your bed.</b>");
 getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom1]);
 
 function bedroom1(){
@@ -109,7 +109,7 @@ function bedroom2(){
 	changeImg2("");
 	name2.innerHTML = "";
 	info2.innerHTML = "";
-	writeDialog("<b>07.36am. Uni successfully dodged, once again.</b>"):
+	writeDialog("<b>07:36am. Uni successfully dodged, once again.</b>");
 	writeDialog('<b>"Why would I want to live any other way?<br>I get to spend all day doing whatever I want, with no responsibilities,<br>all while being waited on by my adoring mother."</b>');
 	writeDialog("<b>Cheems unearthes his laptop from the floor and brings it up to his bed.</b>");
 	writeDialog('<b>"Now, where was I - www.po-"</b>');
