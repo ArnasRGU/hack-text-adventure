@@ -219,7 +219,7 @@ function principalInterrupt() {
 }
 
 function principalAngry() {
-	writeDialog("<b><span style='color:#FF0000;font-size:50px'>I DON'T CARE ABOUT YOUR EXCUSE, GET OUT OF MY SCHOOL</span></b>")
+	writeDialog("<b><span style='color:#FF0000;font-size:50px'>I DON'T CARE ABOUT YOUR EXCUSE, GET OUT OF MY SCHOOL.</span></b>")
 	getChoices(["<i>leave the school</i>"],[leaveSchool]);
 }
 
@@ -241,6 +241,5 @@ function goHome() {
 	name2.innerHTML = "Bus Driver";
 	info2.style.color = "#132575";
 	info2.innerHTML = "Age: 63<br>Likes raw chicken.";
-	writeDialog('<b><span style="color:#132575">..........</span></b>');
+	writeDialog('<b><span style="color:#132575">..........</span><br>~END~</b>');
 }
-
