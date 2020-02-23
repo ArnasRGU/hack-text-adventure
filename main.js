@@ -37,12 +37,13 @@ function getChoices(choicesArr, callbacksArr) {
 	}
 }
 
+writeDialog("<b>7:00am. The morning sun filters in through the blinds, basking your bedroom in a golden glow.<br>Your feet crunch on a decades worth of discarded cans as you shuffle off your bed.</b>");
+getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom1]);
+
 function bedroom1(){
-	writeDialog("<b>7:00am. The morning sun filters in through the blinds, basking your bedroom in a golden glow.<br>Your feet crunch on a decades worth of discarded cans as you shuffle off your bed.</b>");
+	writeDialog("<b>School starts in an hour, you'd better get up.</b>");
 	getChoices(["<i>head down stairs</i>","<i>go back to bed</i>"],[kitchen1,bedroom1]);
 }	
-
-bedroom1();
 		    
 function kitchen1(){
 	changeBackground("images/kitchen.jpg");
