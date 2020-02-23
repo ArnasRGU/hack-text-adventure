@@ -113,7 +113,7 @@ function bedroom2(){
 	writeDialog('<b>"Why would I want to live any other way?<br>I get to spend all day doing whatever I want, with no responsibilities,<br>all while being waited on by my adoring mother."</b>');
 	writeDialog("<b>Cheems unearthes his laptop from the floor and brings it up to his bed.</b>");
 	writeDialog('<b>"Now, where was I - www.po-"</b>');
-	description.innerHTML = "larger";
+	//description.innerHTML = "larger";
 	writeDialog("<b>~GOOD END...?~</B>");
 }
 
