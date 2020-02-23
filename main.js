@@ -41,7 +41,9 @@ function bedroom1(){
 	writeDialog("You awake")
 	getChoices(["<i>go down stairs</i>","<i>stay in bed</i>],[kitchen1,bedroom1]);
 }	
-	    
+
+bedroom1();
+		    
 function kitchen1() {
 	changeBackground("images/kitchen.jpg");
 	changeSpeakingCharacter("images/cheemsMother.png");
