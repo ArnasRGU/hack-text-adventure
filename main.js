@@ -63,7 +63,7 @@ function beefJerkyBreakfast() {
 	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."</b>');
 	writeDialog('<b><span style="color:#b0378a">You had better be leav-</span></b>');
 	changeImg2("images/cheemsMotherCry.png");
-	writeDialog("<b>It's no wonder Dad left us, you can't even cook scrambled eggs properly!</b>);
+	writeDialog("<b>It's no wonder Dad left us, you can't even cook scrambled eggs properly!</b>");
 	getChoices(["<i>leave the house</i>"],[frontYardBad]);
 }
 
