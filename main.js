@@ -50,43 +50,51 @@ function kitchen1(){
 	changeImg2("images/cheemsMother.png");
 	name2.innerHTML = "Cheems Mother";
 	writeDialog('<b><span style="color:#b0378a">H-hey Cheems, I hope you slept well.<br>What do you want for breakfast?</span></b>')
-	getChoices(["<i>sugar puffs®</i>","<i>scrambled eggs</i>", "<i>nothing</i>"],[cerealBreakfast,beefJerkyBreakfast,nothingBreakfast]);
+	getChoices(["<i>sugar puffs®</i>","<i>scrambled eggs</i>", "<i>nothing</i>"],[sugarpuffsBreakfast,eggsBreakfast,nothingBreakfast]);
 }
 
-function cerealBreakfast(){
+function sugarpuffsBreakfast(){
 	writeDialog('<b>"Sugar Puffs®, the nectar of gods." </b>');
 	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
-	getChoices(["<i>leave the house</i>"],[frontYardGood]);
+	getChoices(["<i>leave the house</i>"],[busOntime]);
 }
 
-function beefJerkyBreakfast() {
+function eggsBreakfast(){
 	writeDialog('<b>"Its really chewy... mother must have overcooked them again..."</b>');
 	writeDialog('<b><span style="color:#b0378a">You had better be leav-</span></b>');
 	changeImg2("images/cheemsMotherCry.png");
 	writeDialog("<b>It's no wonder Dad left us, you can't even cook scrambled eggs properly!</b>");
-	getChoices(["<i>leave the house</i>"],[frontYardBad]);
+	getChoices(["<i>leave the house</i>"],[busLate]);
 }
 
 function nothingBreakfast() {
 	writeDialog("<b>you feel airy and light</b>");
 	writeDialog('<b><span style="color:#b0378a">You had better be leaving Cheems, incase you miss your bus.</span></b>');
-	getChoices(["<i>leave the house</i>"],[frontYardGood]);
+	getChoices(["<i>leave the house</i>"],[busOntime]);
 }
 
-function frontYardBad() {
+function busLate() {
 	changeImg2("");
 	name2.innerHTML = "";
 	changeBackground("images/houseExterior.jpg");
-	writeDialog("<b>you missed the bus</b>")
-	getChoices(["<i>quit life</i>"],[console.log]);
+	writeDialog("<b>Due to your argument with Mother, you have missed the bus.<br>You may be able to catch it at before it reaches it's next stop.</b>")
+	getChoices(["<i>run to the next bus stop</i>","return home"],[street1,kitchen2]);
 }
 
-function frontYardGood() {
+function busOntime() {
 	name2.innerHTML = "";
 	changeImg2("");
 	changeBackground("images/houseExterior.jpg");
 	writeDialog("<b>the airs smells good</b>")
 	getChoices(["<i>go to get the bus</i>"], [busScene]);
+}
+
+function kitchen2(){
+	changeBackground("images/kitchen.jpg");
+}
+
+function street1(){
+	changeBackground("images/street.jpg");
 }
 
 function busScene() {
