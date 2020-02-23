@@ -53,21 +53,21 @@ function kitchen1(){
 }
 
 function cerealBreakfast(){
-	writeDialog("A fufilling meal, you feel full");
-	writeDialog('<span style="color:#b0378a">Time for school honey</span>');
+	writeDialog("<b>A fufilling meal, you feel full</b>");
+	writeDialog('<b><span style="color:#b0378a">Time for school honey</span></b>');
 	getChoices(["<i>go out the door</i>"],[frontYardGood]);
 
 }
 
 function beefJerkyBreakfast() {
-	writeDialog("Its really chewy");
-	writeDialog('<span style="color:#b0378a">Time for school honey</span>');
+	writeDialog("<b>Its really chewy</b>");
+	writeDialog('<b><span style="color:#b0378a">Time for school honey</span></b>);
 	getChoices(["<i>go out the door</i>"],[frontYardBad]);
 }
 
 function nothingBreakfast() {
-	writeDialog("you feel airy and light");
-	writeDialog('<span style="color:#b0378a">Time for school honey</span>');
+	writeDialog("<b>you feel airy and light"</b>);
+	writeDialog('<b><span style="color:#b0378a">Time for school honey</span></b>');
 	getChoices(["<i>go out the door</i>"],[frontYardGood]);
 }
 
@@ -75,7 +75,7 @@ function frontYardBad() {
 	changeSpeakingCharacter("");
 	name2.innerHTML = "";
 	changeBackground("images/houseExterior.jpg");
-	writeDialog("you missed the bus")
+	writeDialog("<b>you missed the bus</b>")
 	getChoices(["<i>quit life</i>"],[console.log]);
 }
 
@@ -83,7 +83,7 @@ function frontYardGood() {
 	name2.innerHTML = "";
 	changeSpeakingCharacter("");
 	changeBackground("images/houseExterior.jpg");
-	writeDialog("the airs smells good")
+	writeDialog("<b>the airs smells good</b>")
 	getChoices(["<i>go to get the bus</i>"], [busScene]);
 
 }
@@ -93,7 +93,7 @@ function busScene() {
 	changeSpeakingCharacter("images/busDriver.png")
 	name2.style.color = "#132575";
 	name2.innerHTML = "Bus Driver";
-	writeDialog('<span style="color:#132575">...</span')
+	writeDialog('<b><span style="color:#132575">...</span></b>')
 	getChoices(["<i>sit down and ride to school</i>"],[schoolArrival]);
 }
 
@@ -102,7 +102,7 @@ function schoolArrival() {
 	changeBackground("images/schoolExterior.jpg");
 	changeSpeakingCharacter("");
 	name2.innerHTML = "";
-	writeDialog("Aberdeen University");
+	writeDialog("<b>Aberdeen University...</b>");
 	getChoices(["<i>go inside</i>"],[goInsideSchoolReal]);
 }
 
@@ -115,7 +115,7 @@ function goInsideSchoolReal() {
 	changeBackground("images/schoolCorridor.jpg");
 	changeSpeakingCharacter("");
 	name2.innerHTML = "";
-	writeDialog("first on the rota, science")
+	writeDialog("<b>first on the rota, science</b>")
 	getChoices(["<i>go to science</i>"],[scienceClass]);
 }
 
@@ -124,5 +124,5 @@ function scienceClass() {
 	changeSpeakingCharacter("images/teacherScience.png");
 	name2.style.color = "#797f99";
 	name2.innerHTML = "Science Teacher";
-	writeDialog('<span style="color:#797f99">E=mcheems</span>');
+	writeDialog('<b><span style="color:#797f99">E=mcheems</span></b>');
 }
