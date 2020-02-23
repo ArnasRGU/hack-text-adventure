@@ -93,6 +93,9 @@ function busOntime() {
 
 function kitchen2(){
 	changeBackground("images/kitchen.jpg");
+	changeImg2("images/cheemsMotherCry.png");
+	name2.innerHTML = "Cheems Mother";
+	info2.innerHTML = "Age: 51<br>Can't cook scrambled eggs.";
 }
 
 function street1(){
