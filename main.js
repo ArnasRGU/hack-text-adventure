@@ -112,7 +112,7 @@ function nothingBreakfast() {
 	getChoices(["<i>leave the house</i>"],[busOntime]);
 }
 
-function busLate() {
+function busLate(){
 	changeImg2("");
 	name2.innerHTML = "";
 	info2.innerHTML = "";
@@ -121,13 +121,13 @@ function busLate() {
 	getChoices(["<i>run to the next bus stop</i>","<i>return home</i>"],[street1,kitchen2]);
 }
 
-function busOntime() {
-	name2.innerHTML = "";
-	changeImg2("");
-	info2.innerHTML = "";
+function busOntime(){
 	changeBackground("images/houseExterior.jpg");
-	writeDialog("<b>the airs smells good</b>")
-	getChoices(["<i>go to get the bus</i>"], [bus1]);
+	changeImg2("");
+	name2.innerHTML = "";
+	info2.innerHTML = "";
+	writeDialog("<b>What a beautiful day!<br>The bus arrives.</b>")
+	getChoices(["<i>get on the bus</i>"], [bus1]);
 }
 
 function kitchen2(){
@@ -183,7 +183,7 @@ function bus1(){
 	getChoices(["<i>sit down and ride to school</i>"],[schoolArrival]);
 }
 
-function schoolArrival() {
+function schoolArrival(){
 	changeBackground("images/schoolExterior.jpg");
 	changeImg2("");
 	name2.innerHTML = "";
@@ -192,12 +192,11 @@ function schoolArrival() {
 	getChoices(["<i>go inside</i>"],[goInsideSchoolReal]);
 }
 
-function goInsideSchoolFake() {
+function goInsideSchoolFake(){
 	
 }
 
-
-function goInsideSchoolReal() {
+function goInsideSchoolReal(){
 	changeBackground("images/schoolCorridor.jpg");
 	changeImg2("");
 	name2.innerHTML = "";
@@ -205,7 +204,7 @@ function goInsideSchoolReal() {
 	getChoices(["<i>go to science</i>"],[scienceClass]);
 }
 
-function scienceClass() {
+function scienceClass(){
 	changeBackground("images/classroomScience.jpg");
 	changeImg2("images/teacherScience.png");
 	name2.style.color = "#797f99";
